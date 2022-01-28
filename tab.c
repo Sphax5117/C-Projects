@@ -10,7 +10,7 @@ int main() {
     
     for (b = 0; b < 11; b++)
     {
-        printf("%s", chaine[b]);
+        printf("%s ", chaine[b]);
     }
     
     printf("\n");

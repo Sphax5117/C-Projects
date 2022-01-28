@@ -2,6 +2,17 @@
 
 int main() { // the beginning of the code start necessery with "main"
 
+
+    typedef enum {False, True} bool;
+
+    printf("True or False ?");
+    bool myBoolean = True;
+
+    if (myBoolean) {
+        printf("Hello");
+    }
+
+
     int entireNumber;  //creation of the variables
     float decimalNumber = 9.58; //initiation of the variable 
     char character;
