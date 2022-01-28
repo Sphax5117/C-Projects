@@ -14,4 +14,6 @@ int main() {
     printf("c = %d\n", b);
     printf("res = %d\n", res);
 
+
+    return 0;
 }
