@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void swap(int * x, int * y) { /* Récupère les variables grace a leur adressse*/
     int tmp = * x;
@@ -6,10 +7,41 @@ void swap(int * x, int * y) { /* Récupère les variables grace a leur adressse*
     * y = tmp;
 }
 
+void remplirTableau(int tab[],int size) {
+    int i;
+    for (i = 0; i < size; i++)
+    {
+        *(tab + i) = 5 * i;//  tab[i] = 5 * i;
+    }
+    
+}
+
 int main() {
 
     int a = 10;
     int b = 5;
+    int TabEntier[5];
+    int taille = 5;
+    int i;
+    
+    for ( i = 0; i < taille; i++)
+    {
+        printf("tabEntier[%d] = %d \n", i, TabEntier[i]);
+        
+    }
+
+    printf("\n============\n");
+    remplirTableau(TabEntier, taille);    
+        
+    for ( i = 0; i < taille; i++)
+    {
+        printf("tabEntier[%d] = %d \n", i, TabEntier[i]);
+
+    }
+    
+
+
+
     int * pa = &a;
     printf("A vaut %d (adresse : %p) \n", a, &a);
     printf("=> %p\n", pa);
@@ -20,6 +52,7 @@ int main() {
     printf("Swap...\n");
     printf("a = %d || b = %d\n", a, b);
 
+    
 
     return 0;
 }

@@ -38,7 +38,7 @@ int main() {
             scanf("%d", &creationMode);
         } else {
             printf("Vous avez %d livres dans votres bibliotheque\n", nbLivres);
-            printf("Souhaitez vous quitter (tout sauf 1 et 0), consulter vos livres (0) ou en ajouter 1 (1) ?\n");
+            printf("Souhaitez vous quitter (tout sauf 1 et 0), consulter vos livres (0) ou en ajouter 1 (1) ? \n");
             scanf("%d", &creationMode);
         }
 
