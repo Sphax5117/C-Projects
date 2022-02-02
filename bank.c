@@ -12,7 +12,7 @@ int main() {
 
     FILE * fp1 = fopen("user_pass.txt", "a+");
     FILE * fp2 = fopen("money.txt", "a+");
-
+    
 
     intro();
 
@@ -20,12 +20,15 @@ int main() {
     char pwd[50];
     char usrFile[50];
     int choice;
-    int tmpMoney;
     int money;
-    
+    int addingMoney;
+    fprintf(fp2,"%d", 0);  
+    fscanf(fp2, "%d", &money);
+  
 
     int c = fgetc(fp1);
-    int d = fgetc(fp2);
+    int d;
+    fscanf(fp2, "%d", &d);
 
     if (c == EOF) {
         printf("Actually, you haven't created an account\n");
@@ -53,17 +56,27 @@ int main() {
         scanf("%d", &verification);
         if (verification) {
             printf("Deleting...\n");
-                    
+            remove("user_pass.txt");
+            remove("money.txt");
+            sleep(2);
+            printf("Your account has been deleted !\n");
+        }else {
+            printf("Goodbye \n");
         }
-        sleep(2);
-        printf("Your account has been deleted !\n");
-    }else if (choice == 0)
-    {
-        if (d == EOF)
-        {
+
+    }else if (choice == 0) {
+
+        if (d == 0) {
+            
             int addingChoice;
             printf("You have no money, do you want to add some ? YES(1) or NO(0) : ");
             scanf("%d", &addingChoice);
+            if (addingChoice) {
+                printf("How many do you want to add : ");
+                scanf("%d", &addingMoney);
+                fprintf(fp2, "%d", addingMoney);
+                printf("You have now %d € \n", money);
+            }
         } else {
 
             printf("You have %d€ on your account\n", money);
