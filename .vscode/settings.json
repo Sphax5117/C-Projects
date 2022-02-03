@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "pointeurs.C": "cpp"
+        "pointeurs.C": "cpp",
+        "testbox.C": "cpp"
     }
 }
